@@ -1,0 +1,67 @@
+******Methods for calculating the Shock Exposure Index******
+
+***define labels for Shock Incidence - these labels will need to be adapted based on the 6 shocks collected***
+
+Variable labels
+TypeFlood        ‘Did your household experience excessive rains/flooding within the last year?’
+TypeDrought        ‘Did your household experience variable rains/drought within the last year?’
+TypeHail         ‘Did your household experience hail/frost within the last year?’          
+TypeSlides       ‘Did your household experience variable landslides/erosion within the last year?’
+TypeCrop         ‘Did your household experience crop disease within the last year?’
+TypePests          ‘Did your household experience crop pests within the last year?’
+
+Value labels 
+TypeFlood
+TypeDrought
+TypeHail
+TypeSlides
+TypeCrop
+TypePests
+0.00 'No'
+1.00 'Yes'. 
+
+EXECUTE.
+
+***define labels for Shock Severity******
+
+Variable labels
+SeverityFlood          ‘How severe was the impact of excessive rains/flooding on your households food consumption/income over the last 12 months?’
+SeverityDrought        ‘How severe was the impact of variable rains/drought on your households food consumption/income over the last 12 months?’
+SeverityHail           ‘How severe was the impact of hail/frost on your households food consumption/income over the last 12 months?’         
+SeveritySlides         ‘How severe was the impact of landslides/erosion on your households food consumption/income over the last 12 months?’
+SeverityCrop           ‘How severe was the impact of crop disease on your households food consumption/income over the last 12 months?’
+SeverityPests          ‘How severe was the impact of crop pests on your households food consumption/income over the last 12 months?’
+
+Value labels
+SeverityFlood
+SeverityDrought
+SeverityHail
+SeveritySlides
+SeverityCrop
+SeverityPests
+1.00 'No impact'
+2.00 'Slight decrease'
+3.00 'Severe decrease'
+4.00 'Worst ever happened'.
+
+EXECUTE.
+
+
+***Compute Weighted Average per shock***
+
+Compute SEIFlood = (TypeFlood*SeverityFlood).
+Compute SEIDrought = (TypeDrought*SeverityDrought).
+Compute SEIHail = (TypeHail*SeverityHail).
+Compute SEISlides = (TypeSlides*SeveritySlides).
+Compute SEICrop = (TypeCrop*SeverityCrop).
+Compute SEIPests = (TypePests*SeverityPests).
+
+
+EXECUTE.
+
+***Compute Total Shock Exposure***
+
+Compute SEI = sum(SEIFlood, SEIDrought, SEIHail, SEISlides, SEICrop, SEIPests).
+Variable labels SEI 'Shock Exposure Index'
+
+EXECUTE. 
