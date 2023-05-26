@@ -4,22 +4,6 @@ The Resilience Capacity Score aggregates the unweighted answers to the nine stat
 This result is used to classify households in three groups (low, medium, or high). The percentages at each level are used later in following the changes over time in these percentages for a specific target group of households. 
 Progress achieved or change over time in any of the 9 items is also calculated to understand which capacities or capitals contribute the most to the final score and which need to be reinforced to enhance future climate resilience. */
 
-import delim using "../../Static/RCS_Sample_Survey.csv", clear case(preserve) bindquotes(strict) varn(1)
-qui foreach var of varlist HHRCSBounce HHRCSRevenue HHRCSIncrease HHRCSFinAccess HHRCSSupportCommunity HHRCSSupportPublic HHRCSLessonsLearnt HHRCSFutureChallange HHRCSWarningAccess {
-	cap destring `var', replace i("n/a")
-}
-/// GENERATE RANDOM DATA
-expand 100 in 4
-generate w = runiform()
-
-foreach var of varlist HHRCSBounce HHRCSRevenue HHRCSIncrease HHRCSFinAccess HHRCSSupportCommunity HHRCSSupportPublic HHRCSLessonsLearnt HHRCSFutureChallange HHRCSWarningAccess {
-	replace w = runiform()
-	qui su w 
-	replace `var'=round((w-r(min))*(5-1)/(r(max)-r(min)) + 1,1)
-	
-}
-
-//// END OF RANDOM DATA GENERATION
 ***Resilience Capacity Score***
 capture confirm variable RCS 
 if !_rc {
