@@ -1,6 +1,6 @@
-******Methods for calculating the Shock Exposure Index (SPSS for CO pilot users); Piloted version - 6 shock profiles******
+***Methods for calculating the Shock Exposure Index (SPSS for CO pilot users); Piloted version - 6 shock profiles***
 
-***define labels for Shock Incidence - these labels will need to be adapted based on the 6 shocks collected***
+*define labels for Shock Incidence - these labels will need to be adapted based on the 6 shocks collected*
 
 Variable labels
 TypeFlood        ‘Did your household experience excessive rains/flooding within the last year?’
@@ -22,7 +22,7 @@ TypePests
 
 EXECUTE.
 
-***define labels for Shock Severity******
+*define labels for Shock Severity*
 
 Variable labels
 SeverityFlood          ‘How severe was the impact of excessive rains/flooding on your households food consumption/income over the last 12 months?’
@@ -47,7 +47,7 @@ SeverityPests
 EXECUTE.
 
 
-***Compute Weighted Average per shock***
+*Compute Weighted Average per shock*
 
 Compute SEIFlood = (TypeFlood*SeverityFlood).
 Compute SEIDrought = (TypeDrought*SeverityDrought).
@@ -59,7 +59,7 @@ Compute SEIPests = (TypePests*SeverityPests).
 
 EXECUTE.
 
-***Compute Total Shock Exposure***
+*Compute Total Shock Exposure*
 
 Compute SEI = sum(SEIFlood, SEIDrought, SEIHail, SEISlides, SEICrop, SEIPests).
 Variable labels SEI 'Shock Exposure Index'
