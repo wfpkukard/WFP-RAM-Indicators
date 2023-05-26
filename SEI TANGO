@@ -1,0 +1,194 @@
+******Methods for calculating the Shock Exposure Index******
+
+***define labels for Shock Incidence - these labels will need to be adapted based on the shocks collected***
+
+Variable labels
+TypeFlood          ‘Did your household experience excessive rains/flooding within the last year?’
+TypeDrought        ‘Did your household experience variable rains/drought within the last year?’
+TypeHail         ‘Did your household experience hail/frost within the last year?’          
+TypeSlides       ‘Did your household experience variable landslides/erosion within the last year?’
+TypeCrop         ‘Did your household experience crop disease within the last year?’
+TypePests          ‘Did your household experience crop pests within the last year?’
+TypeWeeds        ‘Did your household experience variable weeds within the last year?’
+TypeDisease         ‘Did your household experience livestock disease within the last year?’
+TypeHuman          ‘Did your household experience human disease outbreaks within the last year?’
+TypeTheft        ‘Did your household experience theft or destruction of assets within the last year?’
+TypeRaid         ‘Did your household experience livestock theft/raids within the last year?’
+TypeAssist          ‘Did your household experience delay of food assistance within the last year?’
+TypePrices        ‘Did your household experience increasing food prices within the last year?’
+TypeIncreases         ‘Did your household experience increased prices of agricultural livestock or inputs within the last year?’
+TypeDecreases         ‘Did your household experience decreased prices of agricultural livestock or inputs within the last year?’
+TypeLand         ‘Did your household experience loss of land/rental property within the last year?’
+TypeJob          ‘Did your household experience unemployment, for youths within the last year?’
+TypeDeath         ‘Did your household experience death of a household member within the last year?’
+
+Value labels 
+TypeFlood
+TypeDrought
+TypeHail
+TypeSlides
+TypeCrop
+TypePests
+TypeWeeds
+TypeDisease
+TypeHuman
+TypeTheft
+TypeRaid
+TypeAssist
+TypePrices
+TypeIncreases
+TypeDecreases
+TypeLand
+TypeJob
+TypeDeath
+0.00 'No'
+1.00 'Yes'. 
+
+EXECUTE.
+
+***define labels for Shock Severity Income******
+
+Variable labels
+IncomeFlood          ‘How severe was the impact of excessive rains/flooding on your households income over the last 12 months?’
+IncomeDrought        ‘How severe was the impact of variable rains/drought on your households income over the last 12 months?’
+IncomeHail           ‘How severe was the impact of hail/frost on your households income over the last 12 months?’         
+IncomeSlides         ‘How severe was the impact of landslides/erosion on your households income over the last 12 months?’
+IncomeCrop           ‘How severe was the impact of crop disease on your households income over the last 12 months?’
+IncomePests          ‘How severe was the impact of crop pests on your households income over the last 12 months?’
+IncomeWeeds          ‘How severe was the impact of weeds on your households income over the last 12 months?’
+IncomeDisease        ‘How severe was the impact of livestock disease on your households income over the last 12 months?’
+IncomeHuman          ‘How severe was the impact of human disease outbreaks on your households income over the last 12 months?’
+IncomeTheft          ‘How severe was the impact of theft or destruction of assets on your households income over the last 12 months?’
+IncomeRaid           ‘How severe was the impact of theft of livestock (raids) on your households income over the last 12 months?’
+IncomeAssist         ‘How severe was the impact of delayed food assistance on your households income over the last 12 months?’
+IncomePrices         ‘How severe was the impact of increasing food prices on your households income over the last 12 months?’
+IncomeIncreases      'How severe was the impact of increased prices of agricultural livestock or inputs on your households income over the last 12 months?’
+IncomeDecreases      'How severe was the impact of decreased prices of agricultural livestock or inputs on your households income over the last 12 months?’
+IncomeLand           ‘How severe was the impact of loss of land/rental property on your households income over the last 12 months?’
+IncomeJob            ‘How severe was the impact of job loss (for youths) on your households income over the last 12 months?’
+IncomeDeath          ‘How severe was the impact of death of household member on your households income over the last 12 months?’
+
+Value labels
+IncomeFlood
+IncomeDrought
+IncomeHail
+IncomeSlides
+IncomeCrop
+IncomePests
+IncomeWeeds
+IncomeDisease
+IncomeHuman
+IncomeTheft
+IncomeRaid
+IncomeAssist
+IncomePrices
+IncomeInputs
+IncomeLand
+IncomeJob
+IncomeDeath
+1.00 'No impact'
+2.00 'Slight decrease'
+3.00 'Severe decrease'
+4.00 'Worst ever happened'.
+
+EXECUTE.
+
+Variable labels
+FCSFlood          ‘How severe was the impact of excessive rains/flooding on your households food consumption over the last 12 months?’
+FCSDrought        ‘How severe was the impact of variable rains/drought on your households food consumption over the last 12 months?’
+FCSHail           ‘How severe was the impact of hail/frost on your households food consumption over the last 12 months?’         
+FCSSlides         ‘How severe was the impact of landslides/erosion on your households food consumption over the last 12 months?’
+FCSCrop           ‘How severe was the impact of crop disease on your households food consumption over the last 12 months?’
+FCSPests          ‘How severe was the impact of crop pests on your households food consumption over the last 12 months?’
+FCSWeeds          ‘How severe was the impact of weeds on your households food consumption over the last 12 months?’
+FCSDisease        ‘How severe was the impact of livestock disease on your households food consumption over the last 12 months?’
+FCSHuman          ‘How severe was the impact of human disease outbreaks on your households food consumption over the last 12 months?’
+FCSTheft          ‘How severe was the impact of theft or destruction of assets on your households food consumption over the last 12 months?’
+FCSRaid           ‘How severe was the impact of theft of livestock (raids) on your households food consumption over the last 12 months?’
+FCSAssist         ‘How severe was the impact of delayed food assistance on your households food consumption over the last 12 months?’
+FCSPrices         ‘How severe was the impact of increasing food prices on your households food consumption over the last 12 months?’
+FCSIncreases      'How severe was the impact of increased prices of agricultural livestock or inputs on your households food consumption over the last 12 months?’
+FCSDecreases      'How severe was the impact of decreased prices of agricultural livestock or inputs on your households food consumption over the last 12 months?’
+FCSLand           ‘How severe was the impact of loss of land/rental property on your households food consumption over the last 12 months?’
+FCSJob            ‘How severe was the impact of job loss (for youths) on your households food consumption over the last 12 months?’
+FCSDeath          ‘How severe was the impact of death of household member on your households food consumption over the last 12 months?’
+
+Value labels
+FCSFlood
+FCSDrought
+FCSHail
+FCSSlides
+FCSCrop
+FCSPests
+FCSWeeds
+FCSDisease
+FCSHuman
+FCSTheft
+FCSRaid
+FCSAssist
+FCSPrices
+FCSIncreases
+FCSDecreases
+FCSLand
+FCSJob
+FCSDeath
+1.00 'No impact'
+2.00 'Slight decrease'
+3.00 'Severe decrease'
+4.00 'Worst ever happened'.
+
+EXECUTE.
+
+***Compute Perceived Severity Variables per shock***
+
+Compute SeverityFlood = sum (IncomeFlood, FCSFlood).
+Compute SeverityDrought = sum (IncomeDrought, FCSDrought).
+Compute SeverityHail = sum (IncomeHail, FCSHail).
+Compute SeveritySlides = sum (IncomeSlides, FCSSlides).
+Compute SeverityCrop = sum (IncomeCrop, FCSCrop).
+Compute SeverityPests = sum (IncomePests, FCSPests).
+Compute SeverityWeeds = sum (IncomeWeeds, FCSWeeds).
+Compute SeverityDisease = sum (IncomeDisease, FCSDisease).
+Compute SeverityHuman = sum (IncomeHuman, FCSHuman).
+Compute SeverityTheft = sum (IncomeTheft, FCSTheft).
+Compute SeverityRaid = sum (IncomeRaid, FCSRaid).
+Compute SeverityAssist = sum (IncomeAssist, FCSAssist).
+Compute SeverityPrices = sum (IncomePrices, FCSPrices).
+Compute SeverityIncreases = sum (IncomeIncreases, FCSIncreases).
+Compute SeverityDecreases = sum (IncomeDecreases, FCSDecreases).
+Compute SeverityLand = sum (IncomeLand, FCSLand).
+Compute SeverityJob = sum (IncomeJob, FCSJob).
+Compute SeverityDeath = sum (IncomeDeath, FCSDeath).
+
+EXECUTE.
+
+***Compute Weighted Average per shock***
+
+Compute SEIFlood = (TypeFlood*SeverityFlood).
+Compute SEIDrought = (TypeDrought*SeverityDrought).
+Compute SEIHail = (TypeHail*SeverityHail).
+Compute SEISlides = (TypeSlides*SeveritySlides).
+Compute SEICrop = (TypeCrop*SeverityCrop).
+Compute SEIPests = (TypePests*SeverityPests).
+Compute SEIWeeds = (TypeWeeds*SeverityWeeds).
+Compute SEIDisease = (TypeDisease*SeverityDisease).
+Compute SEIHuman = (TypeHuman*SeverityHuman).
+Compute SEITheft = (TypeTheft*SeverityTheft).
+Compute SEIRaid = (TypeRaid*SeverityRaid).
+Compute SEIAssist = (TypeAssist*SeverityAssist).
+Compute SEIPrices = (TypePrices*SeverityPrices).
+Compute SEIIncreases = (TypeIncreases*SeverityIncreases).
+Compute SEIDecreases = (TypeDecreases*SeverityDecreases).
+Compute SEILand = (TypeLand*SeverityLand).
+Compute SEIJob = (TypeJob*SeverityJob).
+Compute SEIDeath = (TypeDeath*SeverityDeath).
+
+EXECUTE.
+
+***Compute Total Shock Exposure***
+
+Compute SEI = sum(SEIFlood, SEIDrought, SEIHail, SEISlides, SEICrop, SEIPests, SEIWeeds, SEIDisease, 
+SEIHuman, SEITheft, SEIRaid, SEIAssist, SEIPrices, SEIIncreases, SEIDecreases, SEILand, SEIJob, SEIDeath).
+Variable labels SEI 'Shock Exposure Index'
+
+EXECUTE. 
