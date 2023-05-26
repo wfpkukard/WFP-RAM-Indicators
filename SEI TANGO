@@ -1,6 +1,6 @@
-******Methods for calculating the Shock Exposure Index******
+******Methods for calculating the Shock Exposure Index (SPSS for CO pilot users); TANGO version - 18 shock profile******
 
-***define labels for Shock Incidence - these labels will need to be adapted based on the shocks collected***
+***define labels for Shock Incidence***
 
 Variable labels
 TypeFlood          ‘Did your household experience excessive rains/flooding within the last year?’
