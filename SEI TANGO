@@ -1,6 +1,6 @@
-******Methods for calculating the Shock Exposure Index (SPSS for CO pilot users); TANGO version - 18 shock profile******
+*Methods for calculating the Shock Exposure Index (SPSS for CO pilot users); TANGO version - 18 shock profile*
 
-***define labels for Shock Incidence***
+*define labels for Shock Incidence*
 
 Variable labels
 TypeFlood          ‘Did your household experience excessive rains/flooding within the last year?’
@@ -46,7 +46,7 @@ TypeDeath
 
 EXECUTE.
 
-***define labels for Shock Severity Income******
+*define labels for Shock Severity Income*
 
 Variable labels
 IncomeFlood          ‘How severe was the impact of excessive rains/flooding on your households income over the last 12 months?’
@@ -139,7 +139,7 @@ FCSDeath
 
 EXECUTE.
 
-***Compute Perceived Severity Variables per shock***
+*Compute Perceived Severity Variables per shock*
 
 Compute SeverityFlood = sum (IncomeFlood, FCSFlood).
 Compute SeverityDrought = sum (IncomeDrought, FCSDrought).
@@ -162,7 +162,7 @@ Compute SeverityDeath = sum (IncomeDeath, FCSDeath).
 
 EXECUTE.
 
-***Compute Weighted Average per shock***
+*Compute Weighted Average per shock*
 
 Compute SEIFlood = (TypeFlood*SeverityFlood).
 Compute SEIDrought = (TypeDrought*SeverityDrought).
@@ -185,7 +185,7 @@ Compute SEIDeath = (TypeDeath*SeverityDeath).
 
 EXECUTE.
 
-***Compute Total Shock Exposure***
+*Compute Total Shock Exposure*
 
 Compute SEI = sum(SEIFlood, SEIDrought, SEIHail, SEISlides, SEICrop, SEIPests, SEIWeeds, SEIDisease, 
 SEIHuman, SEITheft, SEIRaid, SEIAssist, SEIPrices, SEIIncreases, SEIDecreases, SEILand, SEIJob, SEIDeath).
