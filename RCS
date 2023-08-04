@@ -94,7 +94,6 @@ putexcel B7=matrix(RCS), nformat("#.0 %")
 /*
 As each figure represents the percentage of households at each level, the sum of each row must be 100% in all cases. 
 	Individual statement score calculation:
-
 The calculation of the average score for each statement is recommended for use in the narrative and in the further analysis of elements with higher incidence in the RCS calculation and/or for picking out the major variations over time of the elements of the score. 
 
 Therefore, using answers coded as values from 1 to 5, the sum of all values for each statement(S), divided by the sample size (n) will yield 9 values (one for each Q) that could be compared over time and used as shown in the visualization section. 
